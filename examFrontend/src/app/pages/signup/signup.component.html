@@ -1,13 +1,53 @@
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 offset-md-5">
-                <div class="container text-centre">
-                    <img src="../../../assets/Logo.png" height="150px" width="150px"  alt="">
+            <div class="col-md-6 offset-md-3" style="margin-top:20px">
+                <div class="container text-center">
+                    <img src="../../../assets/Logo.png"  height="150px" width="150px"  alt="">
                 </div>
-                <h1 class="text-centre">
-                    Register Here
+                <h1 class="text-center">
+                    Register Here !!
                 </h1>
+                <form (ngSubmit)="formSubmit()">
+
+                    <!--Name-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Username</mat-label>
+                        <input matInput type="name" placeholder="Input">
+                      </mat-form-field>
+
+                    <!--Password-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Input">
+                      </mat-form-field>
+                    <!--first name-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Input">
+                      </mat-form-field>
+                    <!--lastname-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Input">
+                      </mat-form-field>
+                    <!--email-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="email" placeholder="Input">
+                      </mat-form-field>
+                    <!--contact-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Contact</mat-label>
+                        <input matInput type="number" placeholder="Input">
+                      </mat-form-field>
+
+                      <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary"> Register</button>
+                        <button mat-raised-button style="margin-left:20px" color="accent"> Reset</button>
+                      </div>
+
+                </form>
             </div>
         </div>
     </div>
