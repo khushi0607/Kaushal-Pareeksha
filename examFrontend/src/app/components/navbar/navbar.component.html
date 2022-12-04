@@ -1,1 +1,42 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary">
+    <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_book</mat-icon>
+    </a>
+    <span>Exam Portal</span>
+    <span class="example-spacer"></span>
+<div *ngIf="!isLoggedIn" >
+    <a routerLink="/login" 
+    mat-icon-button class="example-icon favorite-icon" 
+    aria-label="Example icon-button with heart icon"
+    style="margin-right:70px;font-size:17px;">
+    Login
+    <!--<mat-icon>call_received</mat-icon>-->
+    </a>
+
+    <a
+    routerLink="/signup" 
+    mat-icon-button class="example-icon favorite-icon" 
+    aria-label="Example icon-button with heart icon"
+    style="margin-right:60px;font-size:17px;">
+    Signup
+    <!--<mat-icon>create</mat-icon>-->
+    </a>
+</div>
+<div *ngIf="isLoggedIn && user">
+    <a 
+    (click)="logout()" 
+    routerLink="/login" 
+    mat-icon-button class="example-icon favorite-icon" 
+    aria-label="Example icon-button with heart icon"
+    style="margin-right:50px;font-size:17px">
+    Logout
+    <!--<mat-icon>logout</mat-icon>-->
+    </a>
+
+    <button 
+    class="example-button-row"
+    routerLink="/admin/profile"
+    style="margin-right:50px;font-size:17px" 
+    mat-button>{{user.username}}</button>
+</div>
+</mat-toolbar>

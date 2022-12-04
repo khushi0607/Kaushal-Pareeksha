@@ -5,6 +5,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.exam.helper.UserFoundException;
 import com.exam.model.User;
 import com.exam.model.UserRole;
 import com.exam.repo.RoleRepository;
@@ -28,7 +29,7 @@ public class UserServiceImpl implements UserService{
 		if(temp!=null)
 		{
 			System.out.println("User already present");
-			throw new Exception("User already present");
+			throw new UserFoundException();
 		}
 		else
 		{
